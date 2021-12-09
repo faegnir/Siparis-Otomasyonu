@@ -16,5 +16,7 @@ namespace Sipariş_Otomasyonu
         {
             InitializeComponent();
         }
+
+     
     }
 }
