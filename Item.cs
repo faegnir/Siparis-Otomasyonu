@@ -8,23 +8,16 @@ namespace Sipariş_Otomasyonu
 {
     class Item
     {
-        public float ShippingWeight { get; set; }
+        public int ShippingWeight { get; set; }
         public string Description { get; set; }
         public float Price { get; set; }
         public void GetWeight(int shippingWeight)
         {
             this.ShippingWeight = shippingWeight;
         }
-        public float GetPriceForQuantity()
+        public void GetPriceForQuantity(float price)
         {
-            if (this.ShippingWeight >= 30 && this.ShippingWeight <= 50)
-                this.Price = this.ShippingWeight * 1.8f;
-            else if (this.ShippingWeight > 50)
-                this.Price = this.ShippingWeight * 1.3f;
-            else
-                this.Price = this.ShippingWeight;
-
-            return this.Price;
+            this.Price = price;
         }
        
         public override string ToString()
