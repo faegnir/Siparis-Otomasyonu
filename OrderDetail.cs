@@ -10,26 +10,28 @@ namespace Sipariş_Otomasyonu
     {
         public int Quantity { get; set; }
         public bool TaxStatus { get; set; }
-        private List<Item> Items { get; set; }
+        private List<Item> items { get; }
         public OrderDetail()
         {
-            this.Items = new List<Item>();
+            items = new List<Item>();
         }
-        public void AddItem(Item item)
+        public void AddItem(string description, float shippingWeight,float price)
         {
-            Items.Add(item);
-            this.Items.ForEach(Console.WriteLine);
+            items.Add(new Item { Description = description, ShippingWeight = shippingWeight, Price = price });
         }
         public float CalcSubTotal(int quantity,Item item)
         {
             this.Quantity = quantity;
-            return item.Price * Quantity;
-            
+            return item.Price * Quantity;  
         }
         public float CalcWeight(int quantity,Item item)
         {
             this.Quantity = quantity;
             return item.ShippingWeight * Quantity;
+        }
+        public List<Item> ListItem()
+        {
+            return items;
         }
     }
 }

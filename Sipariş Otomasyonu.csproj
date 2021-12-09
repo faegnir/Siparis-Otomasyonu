@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A959292B-E2FA-4577-9C24-3E898A7AAC4E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Sipariş_Otomasyonu</RootNamespace>
     <AssemblyName>Sipariş Otomasyonu</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,11 +53,11 @@
     <Compile Include="Check.cs" />
     <Compile Include="Credit.cs" />
     <Compile Include="Customer.cs" />
-    <Compile Include="Form1%28Item%29.cs">
+    <Compile Include="Item Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1%28Item%29.Designer.cs">
-      <DependentUpon>Form1%28Item%29.cs</DependentUpon>
+    <Compile Include="Item Add.Designer.cs">
+      <DependentUpon>Item Add.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2%28Order_Details%29.cs">
       <SubType>Form</SubType>
@@ -69,19 +72,28 @@
       <DependentUpon>Form3%28Order%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
+    <Compile Include="List All Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List All Items.Designer.cs">
+      <DependentUpon>List All Items.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="OrderDetail.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1%28Item%29.resx">
-      <DependentUpon>Form1%28Item%29.cs</DependentUpon>
+    <EmbeddedResource Include="Item Add.resx">
+      <DependentUpon>Item Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2%28Order_Details%29.resx">
       <DependentUpon>Form2%28Order_Details%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3%28Order%29.resx">
       <DependentUpon>Form3%28Order%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List All Items.resx">
+      <DependentUpon>List All Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

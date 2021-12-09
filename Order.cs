@@ -18,7 +18,7 @@ namespace Sipariş_Otomasyonu
         }
         public void CalcTax()
         {
-
+            
         }
         public void CalcTotal()
         {

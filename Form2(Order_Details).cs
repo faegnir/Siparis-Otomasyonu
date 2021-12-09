@@ -18,43 +18,20 @@ namespace Sipariş_Otomasyonu
             InitializeComponent();
         }
         
+        OrderDetail orderDetail = new OrderDetail();
         private void Form2_Order__Load(object sender, EventArgs e)
         {
-            using (StreamReader sr = File.OpenText(Application.StartupPath + "\\Items\\items.txt"))
-            {
-                string str = "";
-                int sayac = 0;
-                while ((str = sr.ReadLine()) != null) 
-                {
-                    foreach (var i in str.Split(' '))
-                    {
-                        if (sayac % 3 == 0)
-                        {
-                            comboBox1.Items.Add(i);
-                        }
-                            sayac++; //sayac%3= 0 olduğu durumlar item descriptionın olduğu yerler
-                    }
-                }
-            }
-            
+            orderDetail.TaxStatus = true;
+            if (orderDetail.TaxStatus == true)
+                label1.Text = "Active";
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OrderDetail orderDetail = new OrderDetail();
             Item item = new Item();
 
-
+            
             label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text),item).ToString();
             label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),item).ToString();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            //%18
-            if (radioButton2.Checked)
-                label1.Text = "Active";
-            else if (radioButton1.Checked)
-                label1.Text = "Active";
         }
     }
 }
