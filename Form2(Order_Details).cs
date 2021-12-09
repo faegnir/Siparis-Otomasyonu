@@ -21,17 +21,36 @@ namespace Sipariş_Otomasyonu
         OrderDetail orderDetail = new OrderDetail();
         private void Form2_Order__Load(object sender, EventArgs e)
         {
-            orderDetail.TaxStatus = true;
-            if (orderDetail.TaxStatus == true)
-                label1.Text = "Active";
+            Listele();
+            label1.Text = "Deactive";
+        }
+        private void Listele()
+        {
+            listBox1.Items.Clear();
+            using (StreamReader sr = File.OpenText(Application.StartupPath + "\\Items\\items.txt"))
+            {
+                string str = "";
+                while ((str = sr.ReadLine()) != null)
+                {
+                    listBox1.Items.Add(str);
+                }
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Item item = new Item();
 
+            string[] temp =listBox1.SelectedItem.ToString().Split(' ');
             
-            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text),item).ToString();
-            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),item).ToString();
+            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),Convert.ToInt32(temp[1])).ToString();
+            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            orderDetail.TaxStatus = true;
+            if (orderDetail.TaxStatus == true)
+                label1.Text = "Active";
         }
     }
 }

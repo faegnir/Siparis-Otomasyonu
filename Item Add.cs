@@ -22,21 +22,17 @@ namespace Sipariş_Otomasyonu
         {
 
         }
-
-        
-        
+   
         Item item = new Item();
         private void addItem_Click(object sender, EventArgs e)
         {
             OrderDetail orderDetail = new OrderDetail();
 
             item.GetWeight(Convert.ToInt32(textBox1.Text));
-            item.GetPriceForQuantity();
+            item.GetPriceForQuantity(Convert.ToInt32(textBox2.Text));
             item.Description = richTextBox1.Text;
 
-            label2.Text = item.Price.ToString();
-
-            orderDetail.AddItem(item.Description,item.ShippingWeight,item.Price);
+            orderDetail.AddItem(item.Description, item.ShippingWeight, item.Price);
 
             //dosyaya yaz
             using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\items.txt"))//her item için ayrı dosya

@@ -72,12 +72,6 @@
       <DependentUpon>Form3%28Order%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
-    <Compile Include="List All Items.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="List All Items.Designer.cs">
-      <DependentUpon>List All Items.cs</DependentUpon>
-    </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="OrderDetail.cs" />
     <Compile Include="Payment.cs" />
@@ -91,9 +85,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3%28Order%29.resx">
       <DependentUpon>Form3%28Order%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="List All Items.resx">
-      <DependentUpon>List All Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

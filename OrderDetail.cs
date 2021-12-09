@@ -15,19 +15,19 @@ namespace Sipariş_Otomasyonu
         {
             items = new List<Item>();
         }
-        public void AddItem(string description, float shippingWeight,float price)
+        public void AddItem(string description, int shippingWeight,float price)
         {
             items.Add(new Item { Description = description, ShippingWeight = shippingWeight, Price = price });
         }
-        public float CalcSubTotal(int quantity,Item item)
+        public float CalcSubTotal(int quantity,float price)
         {
             this.Quantity = quantity;
-            return item.Price * Quantity;  
+            return price * Quantity;  
         }
-        public float CalcWeight(int quantity,Item item)
+        public float CalcWeight(int quantity,int weight)
         {
             this.Quantity = quantity;
-            return item.ShippingWeight * Quantity;
+            return weight * Quantity;
         }
         public List<Item> ListItem()
         {
