@@ -38,12 +38,10 @@ namespace Sipariş_Otomasyonu
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Item item = new Item();
-
             string[] temp =listBox1.SelectedItem.ToString().Split(' ');
             
-            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),Convert.ToInt32(temp[1])).ToString();
-            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
+            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
+            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),Convert.ToInt32(temp[2])).ToString();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,6 +49,12 @@ namespace Sipariş_Otomasyonu
             orderDetail.TaxStatus = true;
             if (orderDetail.TaxStatus == true)
                 label1.Text = "Active";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3_Orderr_ order = new Form3_Orderr_();
+            order.ShowDialog();
         }
     }
 }

@@ -15,9 +15,9 @@ namespace Sipariş_Otomasyonu
         {
             items = new List<Item>();
         }
-        public void AddItem(string description, int shippingWeight,float price)
+        public void AddItem(string description,float price, int shippingWeight)
         {
-            items.Add(new Item { Description = description, ShippingWeight = shippingWeight, Price = price });
+            items.Add(new Item { Description = description, Price = price, ShippingWeight = shippingWeight });
         }
         public float CalcSubTotal(int quantity,float price)
         {
