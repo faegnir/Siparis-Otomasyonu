@@ -10,23 +10,23 @@ namespace Sipariş_Otomasyonu
     {
         public DateTime Date { get; set; }
         public bool Status { get; set; }
-        public OrderDetail orderDetail;
 
+        public OrderDetail orderDetail;
         public Order(OrderDetail orderDetail)
         {
             this.orderDetail = orderDetail;
         }
-        public void CalcTax()
+        public float CalcTax(int quantity,float price)
         {
-            
+            return orderDetail.Quantity * 118 / 100*orderDetail.CalcSubTotal(quantity,price);
         }
-        public void CalcTotal()
+        public float CalcTotal(int quantity,float price)
         {
-
+            return orderDetail.CalcSubTotal(quantity, price) + CalcTax(quantity,price);
         }
-        public void CalcTotalWeight()
+        public float CalcTotalWeight(int quantity,int weight)
         {
-
+            return orderDetail.CalcWeight(quantity,weight) * orderDetail.Quantity;
         }
     }
 }

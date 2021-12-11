@@ -21,8 +21,16 @@ namespace Sipariş_Otomasyonu
         OrderDetail orderDetail = new OrderDetail();
         private void Form2_Order__Load(object sender, EventArgs e)
         {
+            Order order = new Order(orderDetail);
             Listele();
             label1.Text = "Deactive";
+            label4.Text = "";
+
+            order.Date = DateTime.Now;
+            
+            label17.Text = order.Date.ToString();
+            order.Status = true;
+            
         }
         private void Listele()
         {
@@ -42,8 +50,15 @@ namespace Sipariş_Otomasyonu
             
             label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
             label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),Convert.ToInt32(temp[2])).ToString();
-        }
 
+            List<string> orders = new List<string>();
+
+            orders.Add(temp[0]);
+            foreach (var item in orders)
+            {
+                listBox2.Items.Add(item);
+            }
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             orderDetail.TaxStatus = true;
@@ -51,10 +66,29 @@ namespace Sipariş_Otomasyonu
                 label1.Text = "Active";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        { 
+            label4.Text = "Order Taken";
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Form3_Orderr_ order = new Form3_Orderr_();
-            order.ShowDialog();
+            Order o = new Order(orderDetail);
+
+            float sumTax = 0;
+            float sumTotal = 0;
+            string[] temp = listBox2.Items.ToString().Split(' ');
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (i % 1 == 0)
+                {
+                    sumTax = o.CalcTax(Convert.ToInt32(textBox1),Convert.ToInt32(temp[i]));
+                }
+                if (i%2 == 0)
+                {
+                    
+                }
+            }
         }
     }
 }
