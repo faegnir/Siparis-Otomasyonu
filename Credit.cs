@@ -8,11 +8,12 @@ namespace Sipariş_Otomasyonu
 {
     class Credit: Payment
     {
-        public int Number { get; set; }
-        public string Type { get; set; }
-        public DateTime ExpDate { get; set; }
+        public string Number { get; set; }
+        public string CardName { get; set; }
+        public string ExpDate { get; set; }
+        public int Cvv { get; set; }
 
-        public void Authorized()
+        public void Authorized(string cardName, string expDate, string number, int cvv)
         {
 
         }
