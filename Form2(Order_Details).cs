@@ -17,12 +17,23 @@ namespace Sipariş_Otomasyonu
         {
             InitializeComponent();
         }
-        
+
         OrderDetail orderDetail = new OrderDetail();
+        float sumTax = 0;
+        float sumTotal = 0;
+        float sumWeight = 0;
         private void Form2_Order__Load(object sender, EventArgs e)
         {
+            Order order = new Order(orderDetail);
             Listele();
             label1.Text = "Deactive";
+            label4.Text = "";
+
+            order.Date = DateTime.Now;
+
+            label17.Text = order.Date.ToString();
+            order.Status = true;
+
         }
         private void Listele()
         {
@@ -38,12 +49,20 @@ namespace Sipariş_Otomasyonu
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] temp =listBox1.SelectedItem.ToString().Split(' ');
-            
-            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
-            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text),Convert.ToInt32(temp[2])).ToString();
-        }
+            Order o = new Order(orderDetail);
+            string[] temp = listBox1.SelectedItem.ToString().Split(' ');
 
+            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
+            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
+
+            SepeteEkle(temp[0]);
+
+            Hesapla(float.Parse(temp[1]), Convert.ToInt32(temp[2]));
+
+            label3.Text = sumTax.ToString();
+            label9.Text = sumTotal.ToString();
+            label11.Text = sumWeight.ToString();
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             orderDetail.TaxStatus = true;
@@ -51,10 +70,31 @@ namespace Sipariş_Otomasyonu
                 label1.Text = "Active";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SepeteEkle(string name)
         {
-            Form3_Orderr_ order = new Form3_Orderr_();
-            order.ShowDialog();
+            //Sepete ürünlerin isimlerini ekledik
+            List<string> orders = new List<string>();
+
+            orders.Add(name);
+            foreach (var item in orders)
+            {
+                listBox2.Items.Add(item);
+            }
+        }
+
+        private void Hesapla(float price,int weight)
+        {
+            Order o = new Order(orderDetail);
+            //sepetteki ürünlerin ağırlığı kdv'si ve toplam ücretini hesapladık
+
+            sumTax += o.CalcTax(Convert.ToInt32(textBox1.Text), price);
+            sumTotal += o.CalcTotal(Convert.ToInt32(textBox1.Text), price);
+            sumWeight += o.CalcTotalWeight(Convert.ToInt32(textBox1.Text), weight);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label4.Text = "Order Taken";
         }
     }
 }
