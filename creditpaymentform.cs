@@ -36,7 +36,10 @@ namespace Sipariş_Otomasyonu
             credit.CardName = cardname_txbox.Text;
             //MessageBox.Show(credit.Cvv + "\n" + credit.ExpDate + "\n" + credit.Number + "\n" + credit.CardName);
             MessageBox.Show("Your order will arrive in 5 work days!", "Payment Successful!");
-            Close();
+            Form2_Order_ f2o = new Form2_Order_();
+            f2o.Show();
+            this.Hide();
+            
             
 
         }
@@ -51,6 +54,12 @@ namespace Sipariş_Otomasyonu
             {
                 button1.Enabled = true;
             }
+        }
+
+        private void creditpaymentform_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PaymentForm pof = new PaymentForm();
+            pof.Show();
         }
     }
 }

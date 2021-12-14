@@ -52,6 +52,7 @@ namespace Sipariş_Otomasyonu
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label7
@@ -93,7 +94,6 @@ namespace Sipariş_Otomasyonu
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(225, 15);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Quantity";
             // 
             // label13
             // 
@@ -160,8 +160,9 @@ namespace Sipariş_Otomasyonu
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(186, 63);
             this.button3.TabIndex = 38;
-            this.button3.Text = "Payement";
+            this.button3.Text = "Payment";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label11
             // 
@@ -256,7 +257,7 @@ namespace Sipariş_Otomasyonu
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(692, 9);
+            this.label17.Location = new System.Drawing.Point(646, 9);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(54, 17);
             this.label17.TabIndex = 27;
@@ -271,12 +272,24 @@ namespace Sipariş_Otomasyonu
             this.label18.TabIndex = 26;
             this.label18.Text = "Date:";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(649, 229);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(97, 21);
+            this.checkBox1.TabIndex = 39;
+            this.checkBox1.Text = "Reset Cart";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form2_Order_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(775, 436);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
@@ -332,5 +345,6 @@ namespace Sipariş_Otomasyonu
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
