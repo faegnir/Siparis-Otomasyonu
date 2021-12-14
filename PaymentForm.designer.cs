@@ -73,6 +73,7 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.label1);
             this.Name = "PaymentForm";
             this.Text = "PaymentForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaymentForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

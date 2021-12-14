@@ -50,18 +50,29 @@ namespace Sipariş_Otomasyonu
         private void button1_Click(object sender, EventArgs e)
         {
             Order o = new Order(orderDetail);
-            string[] temp = listBox1.SelectedItem.ToString().Split(' ');
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Please provide quantity!");
 
-            label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
-            label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
 
-            SepeteEkle(temp[0]);
+            }
+            else
+            {
 
-            Hesapla(float.Parse(temp[1]), Convert.ToInt32(temp[2]));
+                string[] temp = listBox1.SelectedItem.ToString().Split(' ');
 
-            label3.Text = sumTax.ToString();
-            label9.Text = sumTotal.ToString();
-            label11.Text = sumWeight.ToString();
+                label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
+                label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
+
+
+                SepeteEkle(temp[0]);
+
+                Hesapla(float.Parse(temp[1]), Convert.ToInt32(temp[2]));
+
+                label3.Text = sumTax.ToString();
+                label9.Text = sumTotal.ToString();
+                label11.Text = sumWeight.ToString();
+            }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -94,7 +105,32 @@ namespace Sipariş_Otomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label4.Text = "Order Taken";
+            using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\orders.txt"))//her item için ayrı dosya
+            {
+                foreach (var aq in listBox2.Items)
+                {
+                    sw.Write(aq.ToString() + " "); 
+                }
+                sw.Write(label9.Text);
+                sw.Close();
+            }
+            PaymentForm pf = new PaymentForm();
+            pf.Show();
+            this.Hide();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (checkBox1.Checked == true)
+            {
+                 Form2_Order_ fu = new Form2_Order_();
+                 fu.Show();
+                fu.Location = this.Location;
+                 this.Hide();
+             
+            }
+        }
+
     }
 }

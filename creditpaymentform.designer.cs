@@ -168,6 +168,7 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.label1);
             this.Name = "creditpaymentform";
             this.Text = "creditpaymentform";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.creditpaymentform_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
