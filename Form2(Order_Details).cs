@@ -96,5 +96,10 @@ namespace Sipariş_Otomasyonu
         {
             label4.Text = "Order Taken";
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
