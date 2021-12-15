@@ -16,7 +16,8 @@ namespace Sipariş_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2_Order_());
+            Application.Run(new LoginForm());
+
         }
     }
 }
