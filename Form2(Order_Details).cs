@@ -26,13 +26,12 @@ namespace Sipariş_Otomasyonu
         {
             Order order = new Order(orderDetail);
             Listele();
-            label1.Text = "Deactive";
-            label4.Text = "";
-
+            label1.Text = "Deactive";            
+            
             order.Date = DateTime.Now;
 
-            label17.Text = order.Date.ToString();
-            order.Status = true;
+            label17.Text = order.Date.ToString("dd/mm/yyyy");
+            order.Status = false;
 
         }
         private void Listele()
@@ -52,7 +51,7 @@ namespace Sipariş_Otomasyonu
             Order o = new Order(orderDetail);
             if (textBox1.Text == "")
             {
-                MessageBox.Show("Please provide quantity!");
+                MessageBox.Show("Please provide quantity!", "Error!");
 
 
             }
@@ -114,6 +113,8 @@ namespace Sipariş_Otomasyonu
                 sw.Write(label9.Text);
                 sw.Close();
             }
+            Order opi = new Order(orderDetail);
+            opi.Status = true;
             PaymentForm pf = new PaymentForm();
             pf.Show();
             this.Hide();
@@ -131,6 +132,5 @@ namespace Sipariş_Otomasyonu
              
             }
         }
-
     }
 }

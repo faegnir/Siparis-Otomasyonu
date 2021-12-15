@@ -37,15 +37,16 @@ namespace Sipariş_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 64);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(68, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Payment Options";
             // 
             // credit_button
             // 
-            this.credit_button.Location = new System.Drawing.Point(27, 154);
+            this.credit_button.Location = new System.Drawing.Point(27, 105);
             this.credit_button.Name = "credit_button";
             this.credit_button.Size = new System.Drawing.Size(84, 30);
             this.credit_button.TabIndex = 1;
@@ -55,7 +56,7 @@ namespace Sipariş_Otomasyonu
             // 
             // cash_button
             // 
-            this.cash_button.Location = new System.Drawing.Point(150, 154);
+            this.cash_button.Location = new System.Drawing.Point(150, 105);
             this.cash_button.Name = "cash_button";
             this.cash_button.Size = new System.Drawing.Size(130, 30);
             this.cash_button.TabIndex = 2;
@@ -67,7 +68,7 @@ namespace Sipariş_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 339);
+            this.ClientSize = new System.Drawing.Size(311, 241);
             this.Controls.Add(this.cash_button);
             this.Controls.Add(this.credit_button);
             this.Controls.Add(this.label1);
