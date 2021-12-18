@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sipariş_Otomasyonu
+namespace WindowsFormsApp3
 {
     class Customer
     {
-        public int Name { get; set; }
-        public string Adress { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerAdress { get; set; }
+        public int CustomerPhone { get; set; }
     }
 }
