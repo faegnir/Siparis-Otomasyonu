@@ -315,6 +315,7 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.label7);
             this.Name = "Form2_Order_";
             this.Text = "Order Detail";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_Order__FormClosed);
             this.Load += new System.EventHandler(this.Form2_Order__Load);
             this.ResumeLayout(false);
             this.PerformLayout();

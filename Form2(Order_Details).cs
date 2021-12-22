@@ -32,7 +32,8 @@ namespace Sipariş_Otomasyonu
 
             label17.Text = order.Date.ToString("dd/mm/yyyy");
             order.Status = false;
-
+            
+           
         }
         private void Listele()
         {
@@ -48,21 +49,17 @@ namespace Sipariş_Otomasyonu
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Order o = new Order(orderDetail);
+            
             if (textBox1.Text == "")
             {
                 MessageBox.Show("Please provide quantity!", "Error!");
-
-
             }
             else
             {
-
                 string[] temp = listBox1.SelectedItem.ToString().Split(' ');
 
                 label15.Text = orderDetail.CalcSubTotal(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[1])).ToString();
                 label10.Text = orderDetail.CalcWeight(Convert.ToInt32(textBox1.Text), Convert.ToInt32(temp[2])).ToString();
-
 
                 SepeteEkle(temp[0]);
 
@@ -104,13 +101,15 @@ namespace Sipariş_Otomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\orders.txt"))//her item için ayrı dosya
+            
+            using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\orders.txt"))
             {
+                sw.Write(LoginForm.Name +" ( - ");
                 foreach (var aq in listBox2.Items)
                 {
-                    sw.Write(aq.ToString() + " "); 
+                    sw.Write(aq.ToString() + " - ");
                 }
-                sw.Write(label9.Text);
+                sw.WriteLine(") "+label9.Text);
                 sw.Close();
             }
             Order opi = new Order(orderDetail);
@@ -131,6 +130,13 @@ namespace Sipariş_Otomasyonu
                  this.Hide();
              
             }
+        }
+
+        private void Form2_Order__FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm lg = new LoginForm();
+            lg.Show();
+            this.Hide();
         }
     }
 }

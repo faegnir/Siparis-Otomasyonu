@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Sipariş_Otomasyonu
 {
@@ -28,10 +29,10 @@ namespace Sipariş_Otomasyonu
             this.Hide();
 
         }
-
+        public static string Name = "";
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -43,13 +44,17 @@ namespace Sipariş_Otomasyonu
             sda.Fill(dtbl);
             if(dtbl.Rows.Count==1)
             {
-                Form2_Order_ frm2 = new Form2_Order_();
+                Form2_Order_ frm2 = new Form2_Order_(); 
+                Name = txtKullaniciAdLogin.Text;
+                
                 frm2.Show();
                 this.Hide();
             }
             else if (adminid.Contains(txtKullaniciAdLogin.Text) && adminpw.Contains(txtSifreLogin.Text) && Array.IndexOf(adminid, txtKullaniciAdLogin.Text) == Array.IndexOf(adminpw, txtSifreLogin.Text))
             {
-
+                ControlPanel cntrlfrm = new ControlPanel();
+                cntrlfrm.Show();
+                this.Hide();
             }
             else
             {
@@ -58,8 +63,6 @@ namespace Sipariş_Otomasyonu
                 txtSifreLogin.Text = string.Empty;
             }
             baglanti.Close();
-
-
         }
     }
 }
