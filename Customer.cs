@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp3
+namespace Sipariş_Otomasyonu
 {
-    class Customer
+    public class Customer
     {
         public string CustomerName { get; set; }
         public string CustomerAdress { get; set; }

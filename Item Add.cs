@@ -40,13 +40,19 @@ namespace Sipariş_Otomasyonu
                 sw.WriteLine(item.Description + " " + item.Price + " " + item.ShippingWeight);
                 sw.Close();
             }
+            MessageBox.Show("Item added successfuly!","Successful!");
+            Form1 itemAdd = new Form1();
+            itemAdd.Show();
+            itemAdd.Location = this.Location;
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Bizi order details menüsüne götürür
-            Form2_Order_ orderDetailsMenu = new Form2_Order_();
-            orderDetailsMenu.ShowDialog();
+            //Bizi control panel menüsüne götürür
+            ControlPanel controlPanel = new ControlPanel();
+            controlPanel.Show();
+            this.Hide();
         }
     }
 }

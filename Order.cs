@@ -15,6 +15,7 @@ namespace Sipariş_Otomasyonu
         public float Tax { get; set; }
         public float Total { get; set; }
         public float Weight { get; set; }
+        public Customer Customer { get; set; }
         public Order(OrderDetail orderDetail)
         {
             this.orderDetail = orderDetail;
@@ -22,11 +23,11 @@ namespace Sipariş_Otomasyonu
         public float CalcTax(int quantity,float price)
         {
             //KDV tutarını hesaplar
-            return ((orderDetail.CalcSubTotal(quantity, price) * 118 / 100 )- orderDetail.CalcSubTotal(quantity, price))*quantity;
+            return ((orderDetail.CalcSubTotal(quantity, price) * 118 / 100 ) - orderDetail.CalcSubTotal(quantity, price));
         }
         public float CalcTotal(int quantity,float price)
         {
-            return (orderDetail.CalcSubTotal(quantity, price) * 118 / 100) * quantity;
+            return (orderDetail.CalcSubTotal(quantity, price) * 118 / 100);
         }
         public float CalcTotalWeight(int quantity,int weight)
         {
