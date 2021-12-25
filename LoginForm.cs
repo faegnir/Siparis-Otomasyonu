@@ -29,7 +29,7 @@ namespace Sipariş_Otomasyonu
             this.Hide();
 
         }
-        public static string Name = "";
+        public static string name = "";
         private void LoginForm_Load(object sender, EventArgs e)
         {
             
@@ -45,7 +45,7 @@ namespace Sipariş_Otomasyonu
             if(dtbl.Rows.Count==1)
             {
                 Form2_Order_ frm2 = new Form2_Order_(); 
-                Name = txtKullaniciAdLogin.Text;
+                name = txtKullaniciAdLogin.Text;
                 
                 frm2.Show();
                 this.Hide();
