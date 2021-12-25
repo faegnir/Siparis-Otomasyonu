@@ -3,7 +3,9 @@
 Both #TR and #EN explanation below..
 
 Note: If -- Application.StartupPath + "\\Items\\items.txt" or Application.StartupPath + "\\Items\\orders.txt"-- causes a problem 
-you just have to add Items Folder(contains 2 .txt files) to the application start up path as demonstrated above. Also reminder that login menu based on a local sql database.
+you just have to add "Items" Folder(contains 2 .txt files) to the application start up path as demonstrated above 
+and inside the folder you have to add 2 .txt files "orders" and "items". 
+Also reminder that login menu based on a local sql database.
 
 
 Admin Girişi bilgileri -- Username: admin -- Password: 1234
