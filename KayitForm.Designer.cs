@@ -40,120 +40,119 @@ namespace Sipariş_Otomasyonu
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtpw = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 94);
+            this.label1.Location = new System.Drawing.Point(124, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ADINIZ:";
+            this.label1.Text = "NAME:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 138);
+            this.label2.Location = new System.Drawing.Point(95, 169);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "SOYADINIZ :";
+            this.label2.Text = "SURNAME:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 178);
+            this.label3.Location = new System.Drawing.Point(82, 218);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "KULLANICI ADI :";
+            this.label3.Text = "USER NAME:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 219);
+            this.label4.Location = new System.Drawing.Point(83, 265);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(92, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "ŞİFRE :";
+            this.label4.Text = "PASSWORD:";
             // 
             // btnKayit
             // 
-            this.btnKayit.Location = new System.Drawing.Point(264, 242);
+            this.btnKayit.Location = new System.Drawing.Point(352, 298);
+            this.btnKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKayit.Name = "btnKayit";
-            this.btnKayit.Size = new System.Drawing.Size(75, 23);
+            this.btnKayit.Size = new System.Drawing.Size(100, 28);
             this.btnKayit.TabIndex = 4;
-            this.btnKayit.Text = "KAYIT OL";
+            this.btnKayit.Text = "SIGN IN";
             this.btnKayit.UseVisualStyleBackColor = true;
             this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // btnGeri
             // 
-            this.btnGeri.Location = new System.Drawing.Point(264, 271);
+            this.btnGeri.Location = new System.Drawing.Point(352, 334);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(75, 23);
+            this.btnGeri.Size = new System.Drawing.Size(100, 28);
             this.btnGeri.TabIndex = 5;
-            this.btnGeri.Text = "GERİ";
+            this.btnGeri.Text = "BACK";
             this.btnGeri.UseVisualStyleBackColor = true;
             this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(173, 91);
+            this.txtAd.Location = new System.Drawing.Point(231, 112);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(166, 20);
+            this.txtAd.Size = new System.Drawing.Size(220, 22);
             this.txtAd.TabIndex = 6;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(173, 138);
+            this.txtSoyad.Location = new System.Drawing.Point(231, 170);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(166, 20);
+            this.txtSoyad.Size = new System.Drawing.Size(220, 22);
             this.txtSoyad.TabIndex = 7;
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(173, 178);
+            this.txtid.Location = new System.Drawing.Point(231, 219);
+            this.txtid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(166, 20);
+            this.txtid.Size = new System.Drawing.Size(220, 22);
             this.txtid.TabIndex = 8;
             // 
             // txtpw
             // 
-            this.txtpw.Location = new System.Drawing.Point(173, 216);
+            this.txtpw.Location = new System.Drawing.Point(231, 266);
+            this.txtpw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpw.Name = "txtpw";
-            this.txtpw.Size = new System.Drawing.Size(166, 20);
+            this.txtpw.Size = new System.Drawing.Size(220, 22);
             this.txtpw.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(159, 32);
+            this.label5.Location = new System.Drawing.Point(260, 32);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 16);
+            this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 10;
-            this.label5.Text = "KULLANICI KAYIT EKRANI";
+            this.label5.Text = "SIGN IN";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(182, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Lütfen Bilgilerinizi Giriniz";
             // 
             // KayitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 338);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(600, 416);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtpw);
             this.Controls.Add(this.txtid);
@@ -165,6 +164,7 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KayitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kayıt Ekranı";
@@ -187,6 +187,5 @@ namespace Sipariş_Otomasyonu
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtpw;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }

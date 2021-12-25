@@ -101,34 +101,38 @@ namespace Sipariş_Otomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\orders.txt"))
+            if (listBox2.Items.Count == 0)
             {
-                sw.Write(LoginForm.Name +" ( - ");
-                foreach (var aq in listBox2.Items)
-                {
-                    sw.Write(aq.ToString() + " - ");
-                }
-                sw.WriteLine(") "+label9.Text);
-                sw.Close();
+                MessageBox.Show("You have no items in your cart.");
             }
-            Order opi = new Order(orderDetail);
-            opi.Status = true;
-            PaymentForm pf = new PaymentForm();
-            pf.Show();
-            this.Hide();
+            else
+            {
+                using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\Items\\orders.txt"))
+                {
+                    sw.Write(LoginForm.name + " ( - ");
+                    foreach (var aq in listBox2.Items)
+                    {
+                        sw.Write(aq.ToString() + " - ");
+                    }
+                    sw.WriteLine(") " + label9.Text);
+                    sw.Close();
+                }
+                Order opi = new Order(orderDetail);
+                opi.Status = true;
+                PaymentForm pf = new PaymentForm();
+                pf.Show();
+                this.Hide();
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
             if (checkBox1.Checked == true)
             {
                  Form2_Order_ fu = new Form2_Order_();
                  fu.Show();
                 fu.Location = this.Location;
                  this.Hide();
-             
             }
         }
 
