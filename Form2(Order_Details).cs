@@ -30,7 +30,7 @@ namespace Sipariş_Otomasyonu
             
             order.Date = DateTime.Now;
 
-            label17.Text = order.Date.ToString("dd/mm/yyyy");
+            label17.Text = order.Date.ToString("dd/MM/yyyy");
             order.Status = false;
             
            

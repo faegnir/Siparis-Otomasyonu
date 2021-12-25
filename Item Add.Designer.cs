@@ -41,7 +41,7 @@ namespace Sipariş_Otomasyonu
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 128);
+            this.textBox1.Location = new System.Drawing.Point(160, 128);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 2;
@@ -68,10 +68,10 @@ namespace Sipariş_Otomasyonu
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(148, 81);
+            this.richTextBox1.Location = new System.Drawing.Point(160, 81);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(158, 27);
-            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
             // addItem
@@ -80,7 +80,7 @@ namespace Sipariş_Otomasyonu
             this.addItem.Location = new System.Drawing.Point(336, 248);
             this.addItem.Name = "addItem";
             this.addItem.Size = new System.Drawing.Size(94, 58);
-            this.addItem.TabIndex = 5;
+            this.addItem.TabIndex = 4;
             this.addItem.Text = "Add Item";
             this.addItem.UseVisualStyleBackColor = true;
             this.addItem.Click += new System.EventHandler(this.addItem_Click);
@@ -91,7 +91,7 @@ namespace Sipariş_Otomasyonu
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 28);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -108,10 +108,10 @@ namespace Sipariş_Otomasyonu
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 173);
+            this.textBox2.Location = new System.Drawing.Point(160, 173);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 12;
+            this.textBox2.TabIndex = 3;
             // 
             // Form1
             // 
