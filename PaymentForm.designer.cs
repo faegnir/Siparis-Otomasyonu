@@ -46,6 +46,7 @@ namespace Sipariş_Otomasyonu
             // 
             // credit_button
             // 
+            this.credit_button.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.credit_button.Location = new System.Drawing.Point(27, 105);
             this.credit_button.Name = "credit_button";
             this.credit_button.Size = new System.Drawing.Size(84, 30);
@@ -56,6 +57,7 @@ namespace Sipariş_Otomasyonu
             // 
             // cash_button
             // 
+            this.cash_button.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cash_button.Location = new System.Drawing.Point(150, 105);
             this.cash_button.Name = "cash_button";
             this.cash_button.Size = new System.Drawing.Size(130, 30);
@@ -73,7 +75,7 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.credit_button);
             this.Controls.Add(this.label1);
             this.Name = "PaymentForm";
-            this.Text = "PaymentForm";
+            this.Text = "Payment";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaymentForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

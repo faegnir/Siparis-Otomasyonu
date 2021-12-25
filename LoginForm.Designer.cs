@@ -40,6 +40,7 @@ namespace Sipariş_Otomasyonu
             // 
             // btnKayitOl
             // 
+            this.btnKayitOl.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKayitOl.Location = new System.Drawing.Point(328, 255);
             this.btnKayitOl.Margin = new System.Windows.Forms.Padding(4);
             this.btnKayitOl.Name = "btnKayitOl";
@@ -52,6 +53,7 @@ namespace Sipariş_Otomasyonu
             // 
             // btnGiris
             // 
+            this.btnGiris.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiris.Location = new System.Drawing.Point(220, 255);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(4);
             this.btnGiris.Name = "btnGiris";
@@ -65,22 +67,24 @@ namespace Sipariş_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 110);
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(93, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(100, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "USER NAME:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 197);
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(93, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.Size = new System.Drawing.Size(97, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "PASSWORD";
+            this.label2.Text = "PASSWORD:";
             // 
             // txtKullaniciAdLogin
             // 
@@ -125,7 +129,7 @@ namespace Sipariş_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sipariş Otomasyonu";
+            this.Text = "Order Automation";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

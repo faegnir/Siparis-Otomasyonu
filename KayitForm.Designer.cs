@@ -85,7 +85,7 @@ namespace Sipariş_Otomasyonu
             // btnKayit
             // 
             this.btnKayit.Location = new System.Drawing.Point(352, 298);
-            this.btnKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(100, 28);
             this.btnKayit.TabIndex = 4;
@@ -96,7 +96,7 @@ namespace Sipariş_Otomasyonu
             // btnGeri
             // 
             this.btnGeri.Location = new System.Drawing.Point(352, 334);
-            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4);
             this.btnGeri.Name = "btnGeri";
             this.btnGeri.Size = new System.Drawing.Size(100, 28);
             this.btnGeri.TabIndex = 5;
@@ -107,7 +107,7 @@ namespace Sipariş_Otomasyonu
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(231, 112);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(220, 22);
             this.txtAd.TabIndex = 6;
@@ -115,7 +115,7 @@ namespace Sipariş_Otomasyonu
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(231, 170);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(220, 22);
             this.txtSoyad.TabIndex = 7;
@@ -123,7 +123,7 @@ namespace Sipariş_Otomasyonu
             // txtid
             // 
             this.txtid.Location = new System.Drawing.Point(231, 219);
-            this.txtid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtid.Margin = new System.Windows.Forms.Padding(4);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(220, 22);
             this.txtid.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace Sipariş_Otomasyonu
             // txtpw
             // 
             this.txtpw.Location = new System.Drawing.Point(231, 266);
-            this.txtpw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpw.Margin = new System.Windows.Forms.Padding(4);
             this.txtpw.Name = "txtpw";
             this.txtpw.Size = new System.Drawing.Size(220, 22);
             this.txtpw.TabIndex = 9;
@@ -164,10 +164,10 @@ namespace Sipariş_Otomasyonu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KayitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kayıt Ekranı";
+            this.Text = "SIGN UP";
             this.Load += new System.EventHandler(this.KayitForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
